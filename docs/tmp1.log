@@ -1,0 +1,524 @@
+connection 'backend', class 'vmware', host 'vcln2-7'
+Client (tcp-l) 0 (fd: 5) joined
+
+
+(command-mode) d
+file: xinu.elf 
+connection 'backend-dl', class 'DOWNLOAD', host 'vcln2-7'
+96 -rw-rw-rw- 1 root 92190 Mar 28 backend
+cp-bootable complete
+
+
+
+(command-mode) p
+connection 'backend-pc', class 'POWERCYCLE', host 'vcln2-7'
+Client (named) 1 (fd: 6) joined
+
+system running up!
+DBG$ 0 sysinit> start
+DBG$ 0 init_bsm> start
+DBG$ 0 init_bsm> bsm_tab initialized
+DBG$ 0 print_bsm_tab> start
+
+*** BS tab information start ***
+BS id: 0
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 1
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 2
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 3
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 4
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 5
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 6
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 7
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 8
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 9
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 10
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 11
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 12
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 13
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 14
+State: Free
+VHeap: No
+Total maps: 0
+BS id: 15
+State: Free
+VHeap: No
+Total maps: 0
+*** BS tab information end ***
+
+DBG$ 0 print_bsm_tab> end
+DBG$ 0 init_bsm> end
+DBG$ 0 init_frm_tab> start
+DBG$ 0 init_frm_tab> frm_tab initialized
+DBG$ 0 init_frm_tab> end
+DBG$ 0 init_global_pgt> start
+DBG$ 0 new_pgt> start
+DBG$ 0 get_frm> start
+DBG$ 0 evict_frm> start
+DBG$ 0 evict_frm> returning free frame 0
+DBG$ 0 init_frm> start
+DBG$ 0 init_frm> frame 0 initialized
+DBG$ 0 init_frm> end
+DBG$ 0 evict_frm> end
+DBG$ 0 get_frm> returning valid new_frm
+DBG$ 0 get_frm> end
+DBG$ 0 init_pgt> start
+DBG$ 0 init_pgt> pgt initialized
+DBG$ 0 init_pgt> end
+DBG$ 0 new_pgt> returning new pgt at 0x00400000
+DBG$ 0 new_pgt> end
+DBG$ 0 init_global_pgt> global pt is at 0x00400000
+DBG$ 0 new_pgt> start
+DBG$ 0 get_frm> start
+DBG$ 0 evict_frm> start
+DBG$ 0 evict_frm> returning free frame 1
+DBG$ 0 init_frm> start
+DBG$ 0 init_frm> frame 1 initialized
+DBG$ 0 init_frm> end
+DBG$ 0 evict_frm> end
+DBG$ 0 get_frm> returning valid new_frm
+DBG$ 0 get_frm> end
+DBG$ 0 init_pgt> start
+DBG$ 0 init_pgt> pgt initialized
+DBG$ 0 init_pgt> end
+DBG$ 0 new_pgt> returning new pgt at 0x00401000
+DBG$ 0 new_pgt> end
+DBG$ 0 init_global_pgt> global pt is at 0x00401000
+DBG$ 0 new_pgt> start
+DBG$ 0 get_frm> start
+DBG$ 0 evict_frm> start
+DBG$ 0 evict_frm> returning free frame 2
+DBG$ 0 init_frm> start
+DBG$ 0 init_frm> frame 2 initialized
+DBG$ 0 init_frm> end
+DBG$ 0 evict_frm> end
+DBG$ 0 get_frm> returning valid new_frm
+DBG$ 0 get_frm> end
+DBG$ 0 init_pgt> start
+DBG$ 0 init_pgt> pgt initialized
+DBG$ 0 init_pgt> end
+DBG$ 0 new_pgt> returning new pgt at 0x00402000
+DBG$ 0 new_pgt> end
+DBG$ 0 init_global_pgt> global pt is at 0x00402000
+DBG$ 0 new_pgt> start
+DBG$ 0 get_frm> start
+DBG$ 0 evict_frm> start
+DBG$ 0 evict_frm> returning free frame 3
+DBG$ 0 init_frm> start
+DBG$ 0 init_frm> frame 3 initialized
+DBG$ 0 init_frm> end
+DBG$ 0 evict_frm> end
+DBG$ 0 get_frm> returning valid new_frm
+DBG$ 0 get_frm> end
+DBG$ 0 init_pgt> start
+DBG$ 0 init_pgt> pgt initialized
+DBG$ 0 init_pgt> end
+DBG$ 0 new_pgt> returning new pgt at 0x00403000
+DBG$ 0 new_pgt> end
+DBG$ 0 init_global_pgt> global pt is at 0x00403000
+DBG$ 0 init_global_pgt> global pgt initialized
+DBG$ 0 print_frm_data> start
+
+*** frm debug data start ***
+# of free frames: 1020
+# of used frames: 4
+# of page frames: 0
+# of pt frames: 4
+# of pd frames: 0
+*** frm debug data end ***
+
+DBG$ 0 print_frm_data> end
+DBG$ 0 init_global_pgt> end
+DBG$ 0 new_pgd> start
+DBG$ 0 get_frm> start
+DBG$ 0 evict_frm> start
+DBG$ 0 evict_frm> returning free frame 4
+DBG$ 0 init_frm> start
+DBG$ 0 init_frm> frame 4 initialized
+DBG$ 0 init_frm> end
+DBG$ 0 evict_frm> end
+DBG$ 0 get_frm> returning valid new_frm
+DBG$ 0 get_frm> end
+DBG$ 0 new_pgd> pgd at 0x00404000 is being returned
+DBG$ 0 new_pgd> end
+DBG$ 0 set_pdbr> start
+DBG$ 0 set_pdbr> pd_addr after ls 0x00404000
+DBG$ 0 set_pdbr> end
+DBG$ 0 sysinit> end
+
+
+PC Xinu (CSC501 1-2009 base) #1 (adhanas@vcln2-7.hpc) Fri Mar 28 23:27:21 EDT 2014
+
+4194304 bytes real mem
+143019 bytes Xinu code
+clock enabled
+DBG$ 0 new_pgd> start
+DBG$ 0 get_frm> start
+DBG$ 0 evict_frm> start
+DBG$ 0 evict_frm> returning free frame 5
+DBG$ 0 init_frm> start
+DBG$ 0 init_frm> frame 5 initialized
+DBG$ 0 init_frm> end
+DBG$ 0 evict_frm> end
+DBG$ 0 get_frm> returning valid new_frm
+DBG$ 0 get_frm> end
+DBG$ 0 new_pgd> pgd at 0x00405000 is being returned
+DBG$ 0 new_pgd> end
+DBG$ 0 create> pid 49 pgd at 0x00405000
+DBG$ 0 print_pdbr> start
+
+*** PID PDBR VALUE START ***
+0   0x00404000
+49   0x00405000
+*** PID PDBR VALUE END ***
+
+DBG$ 0 print_pdbr> end
+DBG$ 49 set_pdbr> start
+DBG$ 49 set_pdbr> pd_addr after ls 0x00405000
+DBG$ 49 set_pdbr> end
+DBG$ 49 new_pgd> start
+DBG$ 49 get_frm> start
+DBG$ 49 evict_frm> start
+DBG$ 49 evict_frm> returning free frame 6
+DBG$ 49 init_frm> start
+DBG$ 49 init_frm> frame 6 initialized
+DBG$ 49 init_frm> end
+DBG$ 49 evict_frm> end
+DBG$ 49 get_frm> returning valid new_frm
+DBG$ 49 get_frm> end
+DBG$ 49 new_pgd> pgd at 0x00406000 is being returned
+DBG$ 49 new_pgd> end
+DBG$ 49 create> pid 48 pgd at 0x00406000
+DBG$ 49 print_pdbr> start
+
+*** PID PDBR VALUE START ***
+0   0x00404000
+48   0x00406000
+49   0x00405000
+*** PID PDBR VALUE END ***
+
+DBG$ 49 print_pdbr> end
+DBG$ 49 new_pgd> start
+DBG$ 49 get_frm> start
+DBG$ 49 evict_frm> start
+DBG$ 49 evict_frm> returning free frame 7
+DBG$ 49 init_frm> start
+DBG$ 49 init_frm> frame 7 initialized
+DBG$ 49 init_frm> end
+DBG$ 49 evict_frm> end
+DBG$ 49 get_frm> returning valid new_frm
+DBG$ 49 get_frm> end
+DBG$ 49 new_pgd> pgd at 0x00407000 is being returned
+DBG$ 49 new_pgd> end
+DBG$ 49 create> pid 47 pgd at 0x00407000
+DBG$ 49 print_pdbr> start
+
+*** PID PDBR VALUE START ***
+0   0x00404000
+47   0x00407000
+48   0x00406000
+49   0x00405000
+*** PID PDBR VALUE END ***
+
+DBG$ 49 print_pdbr> end
+DBG$ 48 set_pdbr> start
+DBG$ 48 set_pdbr> pd_addr after ls 0x00406000
+DBG$ 48 set_pdbr> end
+DBG$ 48 get_bs> start
+DBG$ 48 get_bs> returning new bs_id 5 with npages 100
+DBG$ 48 get_bs> end
+get_bs in procA.. 100
+DBG$ 48 xmmap> start
+DBG$ 48 bsm_get_ptr_for_pid> start
+DBG$ 48 bsm_get_ptr_for_pid> returning BSPTR with pid 48
+DBG$ 48 bsm_get_ptr_for_pid> end
+DBG$ 48 bsm_map> start
+DBG$ 48 bsm_map> bs mapping for pid 48, bs id 5, vpage 6000, npages 100 is successful
+DBG$ 48 bsm_map> end
+DBG$ 48 xmmap> xmmap() successful for pid 48, bs id 5, vpage 6000, npages 100
+DBG$ 48 xmmap> end
+xmmap in .. 100
+procA trying to access vaddr 0x01770000
+DBG$ 48 pf_handler> start
+
+
+ inside pf_handler 
+
+DBG$ 48 pf_handler> faulted vaddr 0x01770000, vpage 6000
+DBG$ 48 pf_handler> pd 5, pt 880, pg 0
+DBG$ 48 bsm_lookup> start
+DBG$ 48 bsm_lookup> store 5, offset 0 for pid 48, vaddr 0x01770000, vpage 6000
+DBG$ 48 bsm_lookup> end
+DBG$ 48 new_pgt> start
+DBG$ 48 get_frm> start
+DBG$ 48 evict_frm> start
+DBG$ 48 evict_frm> returning free frame 8
+DBG$ 48 init_frm> start
+DBG$ 48 init_frm> frame 8 initialized
+DBG$ 48 init_frm> end
+DBG$ 48 evict_frm> end
+DBG$ 48 get_frm> returning valid new_frm
+DBG$ 48 get_frm> end
+DBG$ 48 init_pgt> start
+DBG$ 48 init_pgt> pgt initialized
+DBG$ 48 init_pgt> end
+DBG$ 48 new_pgt> returning new pgt at 0x00408000
+DBG$ 48 new_pgt> end
+DBG$ 48 is_frm_present> start
+DBG$ 48 is_frm_present> bad bs offset 0
+DBG$ 48 is_frm_present> returning EMPTY
+DBG$ 48 is_frm_present> end
+DBG$ 48 pf_handler> frame not present.. creating a new frame
+DBG$ 48 get_frm> start
+DBG$ 48 evict_frm> start
+DBG$ 48 evict_frm> returning free frame 9
+DBG$ 48 init_frm> start
+DBG$ 48 init_frm> frame 9 initialized
+DBG$ 48 init_frm> end
+DBG$ 48 evict_frm> end
+DBG$ 48 get_frm> returning valid new_frm
+DBG$ 48 get_frm> end
+DBG$ 48 read_bs> start
+DBG$ 48 read_bs> bad bs offset 0
+DBG$ 48 read_bs> end
+DBG$ 48 pf_handler> read_bs() failed for fr id 9, bs 5, offset 0
+DBG$ 48 pf_handler> returning SYSERR
+DBG$ 48 pf_handler> end
+DBG$ 48 pf_handler> start
+
+
+ inside pf_handler 
+
+DBG$ 48 pf_handler> faulted vaddr 0xffffffff, vpage 1048575
+DBG$ 48 pf_handler> pd 1023, pt 1023, pg 4095
+DBG$ 48 bsm_lookup> start
+DBG$ 48 bsm_lookup> bad vaddr 0xffffffff, vpage 0
+DBG$ 48 bsm_lookup> returning SYSERR
+DBG$ 48 bsm_lookup> end
+DBG$ 48 pf_handler> bsm_lookup() failed
+DBG$ 48 pf_handler> pid 48 will be killed
+DBG$ 48 kill> before bsm_handle_proc_kill()
+DBG$ 48 bsm_handle_proc_kill> start
+DBG$ 48 bsm_remove_proc_maps> start
+DBG$ 48 bsm_remove_frm> start
+DBG$ 48 bsm_remove_frm> returning OK
+DBG$ 48 bsm_remove_frm> end
+DBG$ 48 bsm_remove_proc_maps> frms cleaned for pid 48, bs id 5 using bsm_remove_frm()
+DBG$ 48 bsm_unmap> start
+DBG$ 48 bsm_lookup> start
+DBG$ 48 bsm_lookup> store 5, offset 0 for pid 48, vaddr 0x01770000, vpage 6000
+DBG$ 48 bsm_lookup> end
+DBG$ 48 bsm_unmap> pid 48, vpage 6000 is mapped to bs id 5
+DBG$ 48 print_bs_details> start
+
+*** BS information start ***
+BS id: 5
+State: Mapped
+VHeap: No
+Total maps: 1
+   PID: 48
+   VPage: 6000
+   NPages: 100
+*** BS information end ***
+
+DBG$ 48 print_bs_details> end
+DBG$ 48 bsm_unmap> only one node
+DBG$ 48 bsm_unmap> bs unmapping of pid 48, bs id 5, vpage 6000, is successful
+DBG$ 48 bsm_unmap> chaning bs id state to unmapped as there are no associated processes
+DBG$ 48 print_bs_details> start
+
+*** BS information start ***
+BS id: 5
+State: Unmapped
+VHeap: No
+Total maps: 0
+*** BS information end ***
+
+DBG$ 48 print_bs_details> end
+DBG$ 48 bsm_unmap> end
+DBG$ 48 bsm_remove_proc_maps> pid 48 map is unmapped
+DBG$ 48 bsm_remove_proc_maps> end
+DBG$ 48 remove_pgd> start
+DBG$ 48 free_frm> start
+DBG$ 48 print_frm_id> start
+
+*** frm info start ***
+Frame ID     : 6
+Frame status : In Use
+Frame PID    : -1
+Frame vpage  : 0
+Frame refcnt : 0
+Frame type   : Dir page
+Frame BS     : -1
+Frame offset : -1
+*** frm info end ***
+
+DBG$ 48 print_frm_id> end
+DBG$ 48 update_pgt> start
+DBG$ 48 update_pgt> end
+DBG$ 48 init_frm> start
+DBG$ 48 init_frm> frame 6 initialized
+DBG$ 48 init_frm> end
+DBG$ 48 free_frm> returning OK
+DBG$ 48 free_frm> end
+DBG$ 48 remove_pgd> end
+DBG$ 48 bsm_handle_proc_kill> end
+DBG$ 48 kill> after bsm_handle_proc_kill()
+DBG$ 49 set_pdbr> start
+DBG$ 49 set_pdbr> pd_addr after ls 0x00405000
+DBG$ 49 set_pdbr> end
+DBG$ 47 set_pdbr> start
+DBG$ 47 set_pdbr> pd_addr after ls 0x00407000
+DBG$ 47 set_pdbr> end
+DBG$ 47 get_bs> start
+DBG$ 47 get_bs> returning old bs_id 5 with npages 0
+DBG$ 47 get_bs> end
+get_bs in procB.. 0
+DBG$ 47 xmmap> start
+DBG$ 47 xmmap> asked npages 100 is more than bs id 5's npages 0
+DBG$ 47 xmmap> end
+xmmap in DBG$ 47 pf_handler> start
+
+
+ inside pf_handler 
+
+DBG$ 47 pf_handler> faulted vaddr 0xffffffff, vpage 1048575
+DBG$ 47 pf_handler> pd 1023, pt 1023, pg 4095
+DBG$ 47 bsm_lookup> start
+DBG$ 47 bsm_lookup> bad vaddr 0xffffffff, vpage 0
+DBG$ 47 bsm_lookup> returning SYSERR
+DBG$ 47 bsm_lookup> end
+DBG$ 47 pf_handler> bsm_lookup() failed
+DBG$ 47 pf_handler> pid 47 will be killed
+DBG$ 47 kill> before bsm_handle_proc_kill()
+DBG$ 47 bsm_handle_proc_kill> start
+DBG$ 47 bsm_remove_proc_maps> start
+DBG$ 47 bsm_remove_proc_maps> end
+DBG$ 47 remove_pgd> start
+DBG$ 47 free_frm> start
+DBG$ 47 print_frm_id> start
+
+*** frm info start ***
+Frame ID     : 7
+Frame status : In Use
+Frame PID    : -1
+Frame vpage  : 0
+Frame refcnt : 0
+Frame type   : Dir page
+Frame BS     : -1
+Frame offset : -1
+*** frm info end ***
+
+DBG$ 47 print_frm_id> end
+DBG$ 47 update_pgt> start
+DBG$ 47 update_pgt> end
+DBG$ 47 init_frm> start
+DBG$ 47 init_frm> frame 7 initialized
+DBG$ 47 init_frm> end
+DBG$ 47 free_frm> returning OK
+DBG$ 47 free_frm> end
+DBG$ 47 remove_pgd> end
+DBG$ 47 bsm_handle_proc_kill> end
+DBG$ 47 kill> after bsm_handle_proc_kill()
+DBG$ 49 set_pdbr> start
+DBG$ 49 set_pdbr> pd_addr after ls 0x00405000
+DBG$ 49 set_pdbr> end
+DBG$ 0 set_pdbr> start
+DBG$ 0 set_pdbr> pd_addr after ls 0x00404000
+DBG$ 0 set_pdbr> end
+DBG$ 49 set_pdbr> start
+DBG$ 49 set_pdbr> pd_addr after ls 0x00405000
+DBG$ 49 set_pdbr> end
+
+
+All user processes have completed.
+
+DBG$ 49 print_frm_data> start
+
+*** frm debug data start ***
+# of free frames: 1016
+# of used frames: 8
+# of page frames: 0
+# of pt frames: 5
+# of pd frames: 2
+*** frm debug data end ***
+
+DBG$ 49 print_frm_data> end
+DBG$ 49 kill> before bsm_handle_proc_kill()
+DBG$ 49 bsm_handle_proc_kill> start
+DBG$ 49 bsm_remove_proc_maps> start
+DBG$ 49 bsm_remove_proc_maps> end
+DBG$ 49 remove_pgd> start
+DBG$ 49 free_frm> start
+DBG$ 49 print_frm_id> start
+
+*** frm info start ***
+Frame ID     : 5
+Frame status : In Use
+Frame PID    : -1
+Frame vpage  : 0
+Frame refcnt : 0
+Frame type   : Dir page
+Frame BS     : -1
+Frame offset : -1
+*** frm info end ***
+
+DBG$ 49 print_frm_id> end
+DBG$ 49 update_pgt> start
+DBG$ 49 update_pgt> end
+DBG$ 49 init_frm> start
+DBG$ 49 init_frm> frame 5 initialized
+DBG$ 49 init_frm> end
+DBG$ 49 free_frm> returning OK
+DBG$ 49 free_frm> end
+DBG$ 49 remove_pgd> end
+DBG$ 49 bsm_handle_proc_kill> end
+DBG$ 49 kill> after bsm_handle_proc_kill()
+DBG$ 0 set_pdbr> start
+DBG$ 0 set_pdbr> pd_addr after ls 0x00404000
+DBG$ 0 set_pdbr> end
+
+
+(command-mode) 
+

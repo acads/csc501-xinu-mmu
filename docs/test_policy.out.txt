@@ -1,0 +1,6 @@
+Test SC page replacement policy
+Frame 1032 is replaced
+Frame 1532 is replaced
+
+Test NRU page replacement policy
+Frame 1540 is replaced

@@ -1,0 +1,18 @@
+Timer works 17
+Xinu trap!
+exception 13 (general protection violation) currpid 48 (est_proc_sc)
+eflags 10206 eip 407000 error code 00000000 (0)
+register dump:
+eax 003f00ff (4129023)
+ecx 00000000 (0)
+edx 003fcc76 (4181110)
+ebx 00000026 (38)
+esp 003fcc6c (4181100)
+ebp 003fcc6c (4181100)
+esi 0001d258 (119384)
+edi 00407000 (4222976)
+
+Trap to monitor.....
+monitor commands: <?> help, <b> boot Xinu, <c> continue, <r> restart
+monitor> 
+

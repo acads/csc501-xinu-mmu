@@ -1,0 +1,89 @@
+TODO
+----
+
+
+Modified files
+--------------
+h/pa3.h
+h/paging.h
+paging/policy.c
+paging/vcreate.c
+paging/bsm.c
+paging/get_bs.c
+sys/initialize.c
+sys/kill.c
+
+********************************************************************************
+Usual
+-----
+TODO
+    - check disable/restore pair in every function!
+    - move all print* code and decls under DBG_ON
+    - move all calls to print* code under DBG_ON
+    - make sure theare are no kprintfs anywhere
+    - make sure code compiles and runs without DBG_ON
+    
+~adhanas/afshome/501/setup_vim
+~adhanas/afshome/501/create_xinu
+
+~adhanas/afshome/501/backup_pa3
+~adhanas/afshome/501/restore_pa3
+
+
+sudo /bin/serial_server &
+cd ~adhanas/csc501-lab3/compile
+sudo sh -c "echo 127.0.0.1 `cs-status | head -1 | sed 's/://g'` >> /etc/hosts"
+
+
+DTRACE("DBG$ %d %s> \n", currpid, __func__);
+
+RESTORE_AND_RETURN_ERROR:
+    restore(ps);
+    DTRACE_END;
+    return SYSERR;
+
+
+/******************************************************************************
+ * Name: 
+ *
+ * Desc: 
+ *
+ * Params: 
+ *
+ * Returns:
+ *****************************************************************************/
+
+
+#ifdef DBG_ON
+#endif /* DBG_ON */
+
+scp -r adhanas@152.46.17.176:~/afshome/501/pa3/ .
+
+#include <conf.h>
+#include <kernel.h>
+#include <proc.h>
+#include <stdio.h>
+#include <paging.h>
+
+********************************************************************************
+Notes
+------
+
+Paging
+------
+    - See section 4.2 (page 96) in Intel Vol III.
+
+Page Fault (PF)
+---------------
+    - Enable paging by turining on the PG flag in CR0 register.
+    - On a PF, an error code is pused onto the stack. Not used for PA3.
+    - The faulted VA is loaded onto CR2 register.
+    - See section 6.15 (page 210) in Intel Vol III.
+********************************************************************************
+Questions
+
+* What if more than 16 processes are created using vcreate()?
+* In FAQ #7, we are using vpageno 7000 for procA and 6000 for procB. How come 
+    they both map to the same memory location?
+
+
